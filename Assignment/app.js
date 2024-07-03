@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 
 // Create Operation: Add a new book with POST
 app.post('/books', (req, res) => {
-  console.log('Request Body:', req.body); // Log the request body
   const { title, author } = req.body;
   if (!title || !author) {
     return res.status(400).json({ message: 'Title and author are required' });
